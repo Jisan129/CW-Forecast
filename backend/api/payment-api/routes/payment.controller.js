@@ -3,6 +3,7 @@ const routes=express.Router()
 const SSLCommerzPayment = require('sslcommerz')
 
 
+
 routes.get('/', (req, res) => {
     const data = {
         total_amount: 100,
@@ -42,5 +43,6 @@ routes.get('/', (req, res) => {
         console.log('Redirecting to: ', GatewayPageURL)
     });
 })
+
 
 module.exports =routes

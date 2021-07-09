@@ -2,8 +2,10 @@ const express = require("express");
 
 const blogApi = require('./api/blog-api/blog-api-web')
 const getWeather=require("./api/weather-api/routes/weather.route")
+const SSLCommerzPayment = require('sslcommerz')
 
 const app = express();
+const payment =require("./api/payment-api/routes/payment.controller")
 
 
 configureApp = () => {
@@ -25,6 +27,7 @@ app.get("/express", ((req, res) => {
 
 
 }))
+app.get('/init',payment)
 
 
 app.listen(8001)
